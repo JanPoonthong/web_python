@@ -1,2 +1,2 @@
-# web_programming_python
+# Web programming with Python and Javascript
 This is pratice from CS50 
