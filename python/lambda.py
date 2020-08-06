@@ -4,10 +4,10 @@ people = [
     {"name": "Devon", "house": "Canada"}
 ]
 
-def f(person):
-    return person["name"]
-    print(f)
+#def f(person):
+    #print(person)
+    #return person["name"]
 
 
-people.sort(key=f)
+people.sort(key=lambda person: person["name"])
 print(people)
