@@ -5,7 +5,12 @@
         <script>
 
             function hello() {
-                alert('Hello, world!');
+                const heading = document.querySelector('h1');
+                if (heading.innerHTML === 'Hello') {
+                    heading.innerHTML = 'Jan';
+                } else {
+                    heading.innerHTML = 'Hello';
+                }
             }
             
         </script>
