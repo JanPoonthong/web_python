@@ -3,14 +3,23 @@
     <head>
 
         <title>Counter</title>
-        <script src="counter.js"></script>
+        <script>
+
+            let counter = 0;
+
+            function count() {
+                counter++;
+                document.querySelector('h1').innerHTML = counter;
+            }
+         
+        </script>
 
     </head>
 
     <body>
     
         <h1>0</h1>
-        <button>Count</button>
+        <button onclick="count()">Count</button>
 
     </body>
 </html>
