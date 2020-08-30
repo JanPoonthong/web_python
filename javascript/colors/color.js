@@ -1,0 +1,2 @@
+const friends = [];
+friends = null;
