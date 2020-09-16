@@ -11,18 +11,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    const task = document.querySelector('#task').value;
+    document.querySelector('form').onsubmit = () => {
+      const task = document.querySelector('#task').value;
 
-    const li = document.createElement('li');
-    li.innerHTML = task;
+      const li = document.createElement('li');
+      li.innerHTML = task;
 
-    document.querySelector('#tasks').append(li);
+      document.querySelector('#tasks').append(li);
 
-    document.querySelector('#task').value = '';
+      document.querySelector('#task').value = '';
 
-    document.querySelector('#submit').disabled = true;
+      document.querySelector('#submit').disabled = true;
 
-    // Stop from submitting
-    return false;
+      // Stop from submitting
+      return false;
+    }
+
 });
-
