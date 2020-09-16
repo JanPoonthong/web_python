@@ -1,2 +1,2 @@
 # Web programming with Python and Javascript
-This is pratice from CS50 
+This is practices from CS50
