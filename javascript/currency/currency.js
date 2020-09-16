@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
               document.querySelector('#result').innerHTML = 'Invalid currency';
           }
 
+      })
+      .catch(error => {
+        console.log('Error', error);
       });
         return false;
     }
