@@ -10,13 +10,26 @@
     <div id="app"></div>
     <script type="text/babel">
         class App extends React.Component {
+
+            constructor(props) {
+                super(props);
+                this.state = {
+                    count: 0
+                }
+            }
             render() {
                 return (
                     <div>
-                        <h1>0</h1>
-                        <button>Count</button>
+                        <h1>{this.state.count}</h1>
+                        <button onClick={this.count}>Count</button>
                     </div>
                 );
+            }
+
+            count = () => {
+                this.setState(state => ({
+                    count: state.count + 1
+                }));
             }
         }
 
