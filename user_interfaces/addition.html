@@ -15,6 +15,11 @@
         #problem {
             font-size: 72px;
         }
+
+        #winner {
+            font-size: 72px;
+            color: green;
+        }
     </style>
 </head>
 <body>
@@ -31,8 +36,15 @@
                     score: 0
                 }
             }
-            
+
             render() {
+                if (this.state.score === 10) {
+                    return (
+                        <div id="winner">
+                            You won!
+                        </div>
+                    )
+                }
                 return (
                     <div>
                         <div id="problem">{this.state.num1} + {this.state.num2}</div>
