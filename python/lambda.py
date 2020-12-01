@@ -4,9 +4,9 @@ people = [
     {"name": "Devon", "house": "Canada"}
 ]
 
-
 # def f(person):
-#     return person["house"]
+# print(person)
+# return person["name"]
 
 
 people.sort(key=lambda person: person["name"])
