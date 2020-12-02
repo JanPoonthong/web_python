@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>React</title>
-    <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
-</head>
-<body>
-    <div id="app"></div>
-    <script type="text/babel">
-        class App extends React.Component {
-
-            constructor(props) {
-                super(props);
-                this.state = {
-                    count: 0
+    <head>
+        <title>React</title>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="text/babel">
+            class App extends React.Component {
+            
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                        count: 0
+                    }
+                }
+                render() {
+                    return (
+                        <div>
+                            <h1>{this.state.count}</h1>
+                            <button onClick={this.count}>Count</button>
+                        </div>
+                    );
+                }
+            
+                count = () => {
+                    this.setState(state => ({
+                        count: state.count + 1
+                    }));
                 }
             }
-            render() {
-                return (
-                    <div>
-                        <h1>{this.state.count}</h1>
-                        <button onClick={this.count}>Count</button>
-                    </div>
-                );
-            }
-
-            count = () => {
-                this.setState(state => ({
-                    count: state.count + 1
-                }));
-            }
-        }
-
-        ReactDOM.render(<App />, document.querySelector('#app'));
-    </script>
-</body>
+            
+            ReactDOM.render(<App />, document.querySelector('#app'));
+            
+            
+        </script>
+    </body>
 </html>

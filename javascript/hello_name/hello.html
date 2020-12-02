@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Hello</title>
-    <script>
-        // Load the Dom content first and inside the
-        // function you can add action to what happends
-        // .value is to access values inside a id or form
-        document.addEventListener('DOMContentLoaded', function() {
-
-            document.querySelector('form').onsubmit = function() {
-                const name = document.querySelector('#name').value;
-                alert(`Hello, ${name}!`);
-            };
-        });
-    </script>
-</head>
+    <head>
+        <title>Hello</title>
+        <script>
+            // Load the Dom content first and inside the
+            // function you can add action to what happends
+            // .value is to access values inside a id or form
+            document.addEventListener('DOMContentLoaded', function() {
+            
+                document.querySelector('form').onsubmit = function() {
+                    const name = document.querySelector('#name').value;
+                    alert(`Hello, ${name}!`);
+                };
+            });
+            
+            
+        </script>
+    </head>
     <body>
         <h1>Hello</h1>
         <form>
